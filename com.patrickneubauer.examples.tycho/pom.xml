@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.patrickneubauer.examples.tycho</groupId>
+	<artifactId>com.patrickneubauer.examples.tycho.root</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<parent>
+		<groupId>com.patrickneubauer.examples.tycho</groupId>
+		<artifactId>com.patrickneubauer.examples.tycho.configuration</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>./releng/com.patrickneubauer.examples.tycho.configuration</relativePath>
+	</parent>
+	<properties>
+		<tycho.version>4.0.8</tycho.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<tycho.compiler.source>22</tycho.compiler.source>
+		<tycho.compiler.target>22</tycho.compiler.target>
+		<tycho.compiler.release>22</tycho.compiler.release>
+	</properties>
+
+	<modules>
+		<module>bundles</module>
+		<module>features</module>
+		<module>releng</module>
+	</modules>
+	<dependencies>
+		<dependency>
+			<groupId>org.w3c.css</groupId>
+			<artifactId>sac</artifactId>
+			<version>1.3</version>
+		</dependency>
+		<!--
+		https://mvnrepository.com/artifact/org.eclipse.birt.runtime/org.w3c.css.sac -->
+		<dependency>
+			<groupId>org.eclipse.birt.runtime</groupId>
+			<artifactId>org.w3c.css.sac</artifactId>
+			<version>1.3.1.v200903091627</version>
+		</dependency>
+		<dependency>
+			<groupId>jakarta.annotation</groupId>
+			<artifactId>jakarta.annotation-api</artifactId>
+			<version>2.1.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<!--dependency>
+			<groupId>org.eclipse.equinox.launcher.win32.win32</groupId>
+			<artifactId>x86</artifactId>
+			<version>1.0.0-v20070523</version>
+		</dependency-->
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-compiler-plugin</artifactId>
+				<version>${tycho.version}</version>
+				<configuration>
+					<compilerArgs>
+						<arg>-warn:-raw,unchecked</arg>
+					</compilerArgs>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

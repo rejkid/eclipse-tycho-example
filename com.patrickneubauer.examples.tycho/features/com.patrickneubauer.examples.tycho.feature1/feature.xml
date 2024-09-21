@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.patrickneubauer.examples.tycho.feature1"
+      label="Feature1"
+      version="1.0.0.qualifier"
+      provider-name="patrickneubauer.com">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <plugin
+         id="com.patrickneubauer.examples.tycho.plugin1"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.patrickneubauer.examples.tycho.plugin2"
+         version="0.0.0"/>
+
+   <plugin
+         id="com.patrickneubauer.examples.tycho.rcp"
+         version="0.0.0"/>
+
+</feature>
