@@ -30,7 +30,7 @@ OS: macOS High Sierra (10.13.6)
 
 
 
-BASED ON WORK BY LARS VOGEL:
+BASED ON WORK BY LARS VOGEL: 
 ----------------------------
 
 * [Eclipse Tycho for building plug-ins, OSGi bundles and Eclipse applications - Tutorial](http://www.vogella.com/tutorials/EclipseTycho/article.html)
